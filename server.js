@@ -9,13 +9,13 @@ app.use((req, res, next) => {
     next()
 })
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'BN API proxy'
-    });
-})
+// app.get('/', (req, res) => {
+//     res.json({
+//         message: 'BN API proxy'
+//     });
+// })
 
-app.get('/books', (req, res) => {
+app.get('/', (req, res) => {
     const isbn = req.query.isbn
     axios.get(BN_URL, {
         params: {
